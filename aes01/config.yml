@@ -1,0 +1,81 @@
+arhis:
+    device:
+        appVersion: 0.9.97
+        modelVersion: 
+        anomalVersion: 
+        whlVersion: 
+        deviceId: 
+        osVersion: 
+        hwVersion: 
+        # add other options
+        latitude: 35.7
+        longitude:  127.7
+
+    server:
+        # host: https://arhisdev-api.rbinsight.co.kr
+        # apiKey: 5isdnLocg1f36u5LDN0iiCBZkJNXDVj2VcDhQu6QkLii0gie
+        host: https://arhis-api.rbinsight.co.kr
+        apiKey: XIx8sEc7voMlwJPw7e1wzipF7yKHCar3fY6Jnezd9T0cie
+        uuid: 
+        token: 
+##################################################################
+
+    path:
+        addDevice: 
+            method: POST
+            uri: /api/v2/admin/addDevice
+        analysis: 
+            method: POST
+            uri: /api/v2/arhis/analysis
+        clientStatus: 
+            method: POST
+            uri: /api/v2/arhis/clientStatus
+        upload: 
+            method: POST
+            uri: /api/v2/arhis/upload
+        beginUpload: 
+            method: POST
+            uri: /api/v2/arhis/beginUpload
+        endUpload: 
+            method: POST
+            uri: /api/v2/arhis/endUpload
+        stopUpload: 
+            method: POST
+            uri: /api/v2/arhis/stopUpload
+        log: 
+            method: POST
+            uri: /api/v2/arhis/log
+        download:
+            method: GET
+            uri: /api/v2/arhis/download
+
+    filelocation:
+        sound: /home/pi/wiznet/skp_arhis/media/audio
+        image: /home/pi/wiznet/skp_arhis/media/image
+        log: /home/pi/wiznet/skp_arhis/log_folder
+        db_fn: /home/pi/wiznet/skp_arhis/db_folder/filename_db
+        db_mse: /home/pi/wiznet/skp_arhis/db_folder/mle_db
+
+    SystemSetting:
+        imagePeriod: 10
+        sdLimitRate: 90
+        statePeriod: 10
+        analysisPeriod: 1
+        soundDecibel: 14
+        imageSize: 640x480
+        runMode: Normal
+        deviceMode: deviceNormal
+        groupNo: '0'
+        # isMother: M # Deprecated
+
+    ModelSetting:
+        preprocessingMode: 1
+        mfccVectorCount: 30
+        windowSec: 0.5
+        windowHop: 0.25
+        # modelAd: sd/dss # Deprecated
+        # modelClf: sd/clf # Deprecated
+        samplingRate: 44100
+        chunkSize: 2048
+
+    mode: Normal
